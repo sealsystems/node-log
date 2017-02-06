@@ -1,7 +1,7 @@
 # seal-log
 
-[![Circle CI](https://circleci.com/gh/plossys/seal-log.svg?style=svg&circle-token=8d3e43c11b1a8b9879825d67ce5f98aeea94e99b)](https://circleci.com/gh/plossys/seal-log)
-[![Appveyor](https://ci.appveyor.com/api/projects/status/oq5a0dyr4xievpta?svg=true)](https://ci.appveyor.com/project/Plossys/seal-log)
+[![CircleCI](https://circleci.com/gh/sealsystems/seal-log.svg?style=svg)](https://circleci.com/gh/sealsystems/seal-log)
+[![Appveyor](https://ci.appveyor.com/api/projects/status/uwryvhs5u2a9p0o2?svg=true)](https://ci.appveyor.com/project/Plossys/seal-log-knkyy)
 
 seal-log is the logger for all Node.js modules by SEAL Systems.
 
