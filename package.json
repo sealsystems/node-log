@@ -1,0 +1,35 @@
+{
+  "name": "seal-log",
+  "version": "1.1.9",
+  "description": "Logger for all Node.js modules by SEAL Systems",
+  "author": {
+    "name": "SEAL Systems AG",
+    "email": "opensource@sealsystems.de",
+    "url": "https://www.sealsystems.de"
+  },
+  "license": "MIT",
+  "scripts": {
+    "bot": "bot",
+    "release": "bot release && npm publish",
+    "release-minor": "bot release --type minor && npm publish",
+    "release-major": "bot release --type major && npm publish",
+    "test": "bot test-units",
+    "coverage": "istanbul cover _mocha -- --recursive --ui tdd ",
+    "report": "npm run coverage && if [[ $OSTYPE == darwin* ]]; then open=open; else open=xdg-open; fi && $open coverage/lcov-report/index.html"
+  },
+  "main": "lib/log.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sealsystems/seal-log.git"
+  },
+  "dependencies": {
+    "flaschenpost": "0.15.3"
+  },
+  "devDependencies": {
+    "assertthat": "0.8.3",
+    "eslint-config-seal": "0.0.9",
+    "nodeenv": "0.2.1",
+    "roboter": "0.13.17",
+    "roboter-server": "0.13.17"
+  }
+}
