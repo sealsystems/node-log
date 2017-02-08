@@ -6,10 +6,6 @@
 machine:
   timezone: Europe/Berlin
 
-  environment:
-    MONGO_VERSION: 3.2.9
-    CONSUL_VERSION: 0.7.2
-
   node:
     version: 6.2.2
 
