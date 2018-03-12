@@ -23,14 +23,14 @@
     "url": "https://github.com/sealsystems/node-log.git"
   },
   "dependencies": {
-    "flaschenpost": "0.15.6"
+    "flaschenpost": "1.1.1"
   },
   "devDependencies": {
-    "assertthat": "0.10.3",
+    "assertthat": "1.0.0",
     "eslint-config-seal": "0.0.9",
-    "nodeenv": "0.2.1",
-    "roboter": "0.15.4",
-    "roboter-server": "0.15.4"
+    "nodeenv": "1.0.0",
+    "roboter": "0.16.0",
+    "roboter-server": "0.16.0"
   },
   "publishConfig": {
     "access": "public"

@@ -19,22 +19,22 @@ suite('parseLogLevelEnv', () => {
   });
 
   test('sets LOG_LEVELS according to LOG_LEVEL', (done) => {
-    nodeenv('LOG_LEVEL', 'error', (restore) => {
-      parse();
-      assert.that(process.env.LOG_LEVELS).is.equalTo('error,fatal');
-      restore();
-      done();
-    });
+    const restore = nodeenv('LOG_LEVEL', 'error');
+
+    parse();
+    assert.that(process.env.LOG_LEVELS).is.equalTo('error,fatal');
+    restore();
+    done();
   });
 
   test('throws error if LOG_LEVEL is invalid', (done) => {
-    nodeenv('LOG_LEVEL', 'hugo', (restore) => {
-      assert.that(() => {
-        parse();
-      }).is.throwing('Environment variable LOG_LEVEL is invalid. It must be set to one of the following values: debug,info,warn,error,fatal');
-      restore();
-      done();
-    });
+    const restore = nodeenv('LOG_LEVEL', 'hugo');
+
+    assert.that(() => {
+      parse();
+    }).is.throwing('Environment variable LOG_LEVEL is invalid. It must be set to one of the following values: debug,info,warn,error,fatal');
+    restore();
+    done();
   });
 });
 /* eslint-enable no-process-env */
