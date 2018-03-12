@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "assertthat": "1.0.0",
-    "eslint-config-seal": "0.0.9",
+    "@sealsystems/eslint-config-es": "1.1.1",
     "nodeenv": "1.0.0",
     "roboter": "0.16.0",
     "roboter-server": "0.16.0"
