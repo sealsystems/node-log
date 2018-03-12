@@ -1,5 +1,5 @@
 {
-  "name": "seal-log",
+  "name": "@sealsystems/log",
   "version": "1.2.1",
   "description": "Logger for all Node.js modules by SEAL Systems",
   "author": {
@@ -20,7 +20,7 @@
   "main": "lib/log.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sealsystems/seal-log.git"
+    "url": "https://github.com/sealsystems/node-log.git"
   },
   "dependencies": {
     "flaschenpost": "0.15.6"
@@ -31,5 +31,8 @@
     "nodeenv": "0.2.1",
     "roboter": "0.15.4",
     "roboter-server": "0.15.4"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -1,24 +1,24 @@
-# seal-log
+# @sealsystems/log
 
-[![CircleCI](https://circleci.com/gh/sealsystems/seal-log.svg?style=svg)](https://circleci.com/gh/sealsystems/seal-log)
-[![Appveyor](https://ci.appveyor.com/api/projects/status/uwryvhs5u2a9p0o2?svg=true)](https://ci.appveyor.com/project/Plossys/seal-log-knkyy)
+[![CircleCI](https://circleci.com/gh/sealsystems/@sealsystems/log.svg?style=svg)](https://circleci.com/gh/sealsystems/@sealsystems/log)
+[![Appveyor](https://ci.appveyor.com/api/projects/status/uwryvhs5u2a9p0o2?svg=true)](https://ci.appveyor.com/project/Plossys/@sealsystems/log-knkyy)
 
-seal-log is the logger for all Node.js modules by SEAL Systems.
+@sealsystems/log is the logger for all Node.js modules by SEAL Systems.
 
 All log messages will be written to `stdout` and can then be processed by 3rd-party tools.
 
 ## Installation
 
 ```bash
-$ npm install seal-log
+$ npm install @sealsystems/log
 ```
 
 ## Quick start
 
-First you need to integrate seal-log into your application.
+First you need to integrate @sealsystems/log into your application.
 
 ```javascript
-const log = require('seal-log').getLogger();
+const log = require('@sealsystems/log').getLogger();
 ```
 
 ### Logging
