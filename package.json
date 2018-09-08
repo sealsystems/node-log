@@ -1,6 +1,6 @@
 {
   "name": "@sealsystems/log",
-  "version": "0.0.0",
+  "version": "1.3.0",
   "description": "Logger for all Node.js modules by SEAL Systems",
   "author": {
     "name": "SEAL Systems AG",
