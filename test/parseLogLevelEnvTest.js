@@ -13,8 +13,11 @@ suite('parseLogLevelEnv', () => {
   });
 
   test('does not set LOG_LEVELS', (done) => {
+    const restore = nodeenv({ LOG_LEVEL: undefined, LOG_LEVELS: undefined });
+
     parse();
     assert.that(process.env.LOG_LEVELS).is.undefined();
+    restore();
     done();
   });
 
