@@ -15,7 +15,7 @@
     "coverage": "nyc --reporter=text --reporter=lcov mocha",
     "report": "npm run coverage && if [[ $OSTYPE == darwin* ]]; then open=open; else open=xdg-open; fi && $open coverage/lcov-report/index.html"
   },
-  "main": "lib/log.js",
+  "main": "lib/logger.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/sealsystems/node-log.git"
@@ -24,12 +24,14 @@
     "flaschenpost": "1.1.1"
   },
   "devDependencies": {
-    "assertthat": "1.0.0",
     "@sealsystems/eslint-config-es": "1.1.1",
+    "assertthat": "1.0.0",
     "nodeenv": "1.0.0",
-    "nyc": "12.0.2",
+    "nyc": "13.1.0",
+    "proxyquire": "2.1.0",
     "roboter": "0.16.0",
-    "roboter-server": "0.16.0"
+    "roboter-server": "0.16.0",
+    "sinon": "7.0.0"
   },
   "release": {
     "extends": "@sealsystems/semantic-release-config/node-module"

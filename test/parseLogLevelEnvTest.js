@@ -7,12 +7,12 @@ const parse = require('../lib/parseLogLevelEnv');
 
 /* eslint-disable no-process-env */
 suite('parseLogLevelEnv', () => {
-  test('is a function', (done) => {
+  test('is a function.', (done) => {
     assert.that(parse).is.ofType('function');
     done();
   });
 
-  test('does not set LOG_LEVELS', (done) => {
+  test('does not set LOG_LEVELS.', (done) => {
     const restore = nodeenv({ LOG_LEVEL: undefined, LOG_LEVELS: undefined });
 
     parse();
@@ -21,7 +21,7 @@ suite('parseLogLevelEnv', () => {
     done();
   });
 
-  test('sets LOG_LEVELS according to LOG_LEVEL', (done) => {
+  test('sets LOG_LEVELS according to LOG_LEVEL.', (done) => {
     const restore = nodeenv('LOG_LEVEL', 'error');
 
     parse();
@@ -30,7 +30,7 @@ suite('parseLogLevelEnv', () => {
     done();
   });
 
-  test('throws error if LOG_LEVEL is invalid', (done) => {
+  test('throws error if LOG_LEVEL is invalid.', (done) => {
     const restore = nodeenv('LOG_LEVEL', 'hugo');
 
     assert.that(() => {
