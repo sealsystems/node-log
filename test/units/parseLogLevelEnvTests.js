@@ -3,7 +3,7 @@
 const assert = require('assertthat');
 const nodeenv = require('nodeenv');
 
-const parse = require('../lib/parseLogLevelEnv');
+const parse = require('../../lib/parseLogLevelEnv');
 
 /* eslint-disable no-process-env */
 suite('parseLogLevelEnv', () => {

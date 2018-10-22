@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "bot": "bot",
+    "bot": "npx roboter",
     "release": "semantic-release --branch ${CIRCLE_BRANCH}",
     "test": "npm run bot test-units",
     "coverage": "nyc --reporter=text --reporter=lcov mocha",
@@ -29,8 +29,7 @@
     "nodeenv": "1.0.0",
     "nyc": "13.1.0",
     "proxyquire": "2.1.0",
-    "roboter": "0.16.0",
-    "roboter-server": "0.16.0",
+    "roboter": "2.0.0",
     "sinon": "7.0.0"
   },
   "release": {

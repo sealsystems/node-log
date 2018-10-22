@@ -4,10 +4,10 @@ const assert = require('assertthat');
 const proxyquire = require('proxyquire');
 const sinon = require('sinon');
 
-const logAndTerminate = require('../lib/logAndTerminate');
+const logAndTerminate = require('../../lib/logAndTerminate');
 
 let logged;
-const logAndTerminateMock = proxyquire('../lib/logAndTerminate', {
+const logAndTerminateMock = proxyquire('../../lib/logAndTerminate', {
   flaschenpost: {
     getLogger () {
       return {
