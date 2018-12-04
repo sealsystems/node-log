@@ -9,9 +9,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "bot": "bot",
     "release": "semantic-release --branch ${CIRCLE_BRANCH}",
-    "test": "npm run bot test-units",
+    "test": "npx roboter test",
     "coverage": "nyc --reporter=text --reporter=lcov mocha",
     "report": "npm run coverage && if [[ $OSTYPE == darwin* ]]; then open=open; else open=xdg-open; fi && $open coverage/lcov-report/index.html"
   },
@@ -21,15 +20,14 @@
     "url": "https://github.com/sealsystems/node-log.git"
   },
   "dependencies": {
-    "flaschenpost": "1.1.1"
+    "flaschenpost": "1.1.2"
   },
   "devDependencies": {
-    "assertthat": "1.0.0",
     "@sealsystems/eslint-config-es": "1.1.1",
+    "assertthat": "2.0.0",
     "nodeenv": "1.0.0",
-    "nyc": "12.0.2",
-    "roboter": "0.16.0",
-    "roboter-server": "0.16.0"
+    "nyc": "13.1.0",
+    "roboter": "3.0.3"
   },
   "release": {
     "extends": "@sealsystems/semantic-release-config/node-module"

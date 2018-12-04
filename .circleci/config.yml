@@ -15,7 +15,7 @@ x-environment: &environment
 jobs:
   test:
     docker:
-      - image: circleci/node:8.9.4
+      - image: circleci/node:10
 
     environment:
       <<: *environment
@@ -29,7 +29,7 @@ jobs:
           command: |
             if [ ! -d ./node_modules ]; then
               npm install
-              npm install --no-save @sealsystems/semantic-release-config roboter-cli semantic-release
+              npm install --no-save @sealsystems/semantic-release-config semantic-release
             fi
       - save_cache: &save-cache
           key: dependency-cache-{{ checksum "package.json" }}
@@ -37,7 +37,7 @@ jobs:
             - ./node_modules
       - run:
           name: Run tests
-          command: npm run bot
+          command: npm run test
       - run:
           name: Run code coverage
           command: npm run coverage
@@ -47,7 +47,7 @@ jobs:
 
   release:
     docker:
-      - image: 'circleci/node:8'
+      - image: 'circleci/node:10'
 
     environment:
       <<: *environment
