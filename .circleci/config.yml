@@ -15,7 +15,7 @@ x-environment: &environment
 jobs:
   test:
     docker:
-      - image: circleci/node:8.9.4
+      - image: circleci/node:10
 
     environment:
       <<: *environment
@@ -29,7 +29,6 @@ jobs:
           command: |
             if [ ! -d ./node_modules ]; then
               npm install
-              npm install --no-save @sealsystems/semantic-release-config semantic-release
             fi
       - save_cache: &save-cache
           key: dependency-cache-{{ checksum "package.json" }}
@@ -40,14 +39,14 @@ jobs:
           command: npm run bot
       - run:
           name: Run code coverage
-          command: npm run coverage
+          command: npm run test:coverage
       - store_artifacts:
           path: coverage/lcov-report
           destination: coverage
 
   release:
     docker:
-      - image: 'circleci/node:8'
+      - image: 'circleci/node:10'
 
     environment:
       <<: *environment

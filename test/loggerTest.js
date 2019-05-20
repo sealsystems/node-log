@@ -2,7 +2,7 @@
 
 const assert = require('assertthat');
 
-const logger = require('../../lib/logger');
+const logger = require('../lib/logger');
 
 suite('logger', () => {
   test('is a object.', (done) => {

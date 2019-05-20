@@ -4,14 +4,14 @@ const assert = require('assertthat');
 const proxyquire = require('proxyquire');
 const sinon = require('sinon');
 
-const logAndTerminate = require('../../lib/logAndTerminate');
+const logAndTerminate = require('../lib/logAndTerminate');
 
 let logged;
-const logAndTerminateMock = proxyquire('../../lib/logAndTerminate', {
+const logAndTerminateMock = proxyquire('../lib/logAndTerminate', {
   flaschenpost: {
-    getLogger () {
+    getLogger() {
       return {
-        fatal (message, metadata) {
+        fatal(message, metadata) {
           logged.push({ message, metadata });
         }
       };
@@ -38,12 +38,14 @@ suite('logAndTerminate', () => {
     assert.that(process.exit.isSinonProxy).is.true();
 
     logAndTerminateMock(expected);
-    assert.that(logged).is.equalTo([{
-      message: 'Uncaught exception occurred. Terminate process.',
-      metadata: {
-        err: expected
+    assert.that(logged).is.equalTo([
+      {
+        message: 'Uncaught exception occurred. Terminate process.',
+        metadata: {
+          err: expected
+        }
       }
-    }]);
+    ]);
 
     process.nextTick(() => {
       sinon.assert.called(process.exit);
@@ -64,13 +66,15 @@ suite('logAndTerminate', () => {
       logAndTerminateMock(err, promise);
 
       assert.that(err).is.equalTo(error);
-      assert.that(logged).is.equalTo([{
-        message: 'Unhandled rejection occurred. Terminate process.',
-        metadata: {
-          err,
-          promise
+      assert.that(logged).is.equalTo([
+        {
+          message: 'Unhandled rejection occurred. Terminate process.',
+          metadata: {
+            err,
+            promise
+          }
         }
-      }]);
+      ]);
 
       process.nextTick(() => {
         sinon.assert.called(process.exit);

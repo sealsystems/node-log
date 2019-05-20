@@ -9,11 +9,14 @@
   },
   "license": "MIT",
   "scripts": {
-    "bot": "npx roboter",
-    "release": "semantic-release --branch ${CIRCLE_BRANCH}",
-    "test": "npm run bot test-units",
-    "coverage": "nyc --reporter=text --reporter=lcov mocha",
-    "report": "npm run coverage && if [[ $OSTYPE == darwin* ]]; then open=open; else open=xdg-open; fi && $open coverage/lcov-report/index.html"
+    "bot": "bot",
+    "lint": "lint",
+    "lint:fix": "lint-fix",
+    "release": "release",
+    "test": "test-run",
+    "test:coverage": "test-coverage",
+    "test:coverage:check": "test-coverage-check",
+    "test:report": "test-report"
   },
   "main": "lib/logger.js",
   "repository": {
@@ -21,16 +24,15 @@
     "url": "https://github.com/sealsystems/node-log.git"
   },
   "dependencies": {
-    "flaschenpost": "1.1.1"
+    "flaschenpost": "2.1.0"
   },
   "devDependencies": {
-    "@sealsystems/eslint-config-es": "1.1.1",
-    "assertthat": "1.0.0",
+    "@sealsystems/eslint-config-es": "3.3.5",
+    "@sealsystems/mocha": "2.1.0",
+    "@sealsystems/semantic-release": "4.0.1",
     "nodeenv": "1.0.0",
-    "nyc": "13.1.0",
     "proxyquire": "2.1.0",
-    "roboter": "2.0.0",
-    "sinon": "7.0.0"
+    "sinon": "7.3.2"
   },
   "release": {
     "extends": "@sealsystems/semantic-release-config/node-module"

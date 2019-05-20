@@ -3,7 +3,7 @@
 const assert = require('assertthat');
 const nodeenv = require('nodeenv');
 
-const parse = require('../../lib/parseLogLevelEnv');
+const parse = require('../lib/parseLogLevelEnv');
 
 /* eslint-disable no-process-env */
 suite('parseLogLevelEnv', () => {
@@ -33,9 +33,13 @@ suite('parseLogLevelEnv', () => {
   test('throws error if LOG_LEVEL is invalid.', (done) => {
     const restore = nodeenv('LOG_LEVEL', 'hugo');
 
-    assert.that(() => {
-      parse();
-    }).is.throwing('Environment variable LOG_LEVEL is invalid. It must be set to one of the following values: debug,info,warn,error,fatal');
+    assert
+      .that(() => {
+        parse();
+      })
+      .is.throwing(
+        'Environment variable LOG_LEVEL is invalid. It must be set to one of the following values: debug,info,warn,error,fatal'
+      );
     restore();
     done();
   });
