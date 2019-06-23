@@ -63,6 +63,8 @@ Exceptions that are not caught otherwise are also logged with log level `fatal`.
 
 ## Environment Variables
 
+_Please note that when using mocha, all log-levels are always activated. See [`flaschenpost`](https://www.npmjs.com/package/flaschenpost#setting-a-custom-host)._
+
 ### LOG_LEVELS
 
 A list of log levels to print out. Possible levels are:
