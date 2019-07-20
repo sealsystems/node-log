@@ -1,5 +1,4 @@
 # editorconfig.org
-# overwrites IDEA settings
 root = true
 
 [*]

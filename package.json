@@ -16,7 +16,8 @@
     "test": "test-run",
     "test:coverage": "test-coverage",
     "test:coverage:check": "test-coverage-check",
-    "test:report": "test-report"
+    "test:report": "test-report",
+    "licenses": "license-checker --production --csv"
   },
   "main": "lib/logger.js",
   "repository": {
@@ -28,8 +29,8 @@
   },
   "devDependencies": {
     "@sealsystems/eslint-config-es": "3.3.5",
-    "@sealsystems/mocha": "2.1.0",
-    "@sealsystems/semantic-release": "4.0.1",
+    "@sealsystems/mocha": "3.0.1",
+    "@sealsystems/semantic-release": "4.0.2",
     "nodeenv": "1.0.0",
     "proxyquire": "2.1.0",
     "sinon": "7.3.2"

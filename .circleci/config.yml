@@ -11,11 +11,13 @@ x-environment: &environment
   GIT_COMMITTER_EMAIL: com.git@sealsystems.de
   GIT_COMMITTER_NAME: CircleCI Build
   LOG_LEVELS: fatal
+  TLS_UNPROTECTED: world
 
 jobs:
   test:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:8.9.4
+      - image: consul:0.7.5
 
     environment:
       <<: *environment
@@ -23,7 +25,7 @@ jobs:
     steps:
       - checkout
       - restore_cache: &restore-cache
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}-{{ checksum ".circleci/config.yml" }}
       - run: &install-dependencies
           name: Install dependencies
           command: |
@@ -31,7 +33,7 @@ jobs:
               npm install
             fi
       - save_cache: &save-cache
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}-{{ checksum ".circleci/config.yml" }}
           paths:
             - ./node_modules
       - run:
@@ -46,7 +48,7 @@ jobs:
 
   release:
     docker:
-      - image: 'circleci/node:10'
+      - image: 'circleci/node:8'
 
     environment:
       <<: *environment
