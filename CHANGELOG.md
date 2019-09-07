@@ -1,3 +1,20 @@
+## 2.0.1 (2019-09-07)
+
+### Chores
+
+
+#### bump sinon from 7.3.2 to 7.4.2 ([a092ff2](https://github.com/sealsystems/node-log/commit/a092ff2))
+
+Bumps [sinon](https://github.com/sinonjs/sinon) from 7.3.2 to 7.4.2.
+- [Release notes](https://github.com/sinonjs/sinon/releases)
+- [Changelog](https://github.com/sinonjs/sinon/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/sinonjs/sinon/compare/v7.3.2...v7.4.2)
+
+Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+
+
+---
+
 ## 2.0.0 (2019-05-20)
 
 ### Bug Fixes
