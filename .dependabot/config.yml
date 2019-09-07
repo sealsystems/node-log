@@ -12,8 +12,12 @@ update_configs:
       prefix_development: "no-release"
       include_scope: true
     allowed_updates:
-      # Trigger all updates for dependencies by default
+      # Trigger only security updates by default
       - match:
+          update_type: "security"
+      # Trigger all updates for direct dependencies
+      - match:
+          dependency_type: "direct"
           update_type: "all"
     automerged_updates:
       # Auto-merge minor version updates for `seal-…` dependencies
