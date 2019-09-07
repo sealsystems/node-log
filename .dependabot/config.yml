@@ -1,12 +1,5 @@
 version: 1
 update_configs:
-  # Update Dockerfile
-  - package_manager: "docker"
-    directory: "/"
-    update_schedule: "weekly"
-    commit_message:
-      prefix: "chore"
-      include_scope: true
   # Update package.json
   - package_manager: "javascript"
     directory: "/"
