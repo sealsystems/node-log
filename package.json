@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@sealsystems/eslint-config-es": "3.3.13",
-    "@sealsystems/mocha": "3.0.12",
+    "@sealsystems/mocha": "3.0.13",
     "@sealsystems/semantic-release": "4.0.9",
     "nodeenv": "2.0.1",
     "proxyquire": "2.1.3",
