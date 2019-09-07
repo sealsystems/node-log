@@ -1,3 +1,20 @@
+## 2.0.24 (2019-09-07)
+
+### Chores
+
+
+#### bump [@sealsystems](https://github.com/sealsystems)/mocha from 3.0.13 to 3.0.14 ([58a2162](https://github.com/sealsystems/node-log/commit/58a2162))
+
+Bumps [@sealsystems/mocha](https://github.com/sealsystems/node-mocha) from 3.0.13 to 3.0.14.
+- [Release notes](https://github.com/sealsystems/node-mocha/releases)
+- [Changelog](https://github.com/sealsystems/node-mocha/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/sealsystems/node-mocha/compare/3.0.13...3.0.14)
+
+Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+
+
+---
+
 ## 2.0.23 (2019-09-07)
 
 ### Chores
