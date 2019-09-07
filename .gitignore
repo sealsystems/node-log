@@ -6,6 +6,10 @@ npm-debug.log
 .nyc_output/
 coverage/
 
+# CI
+output/
+temp/
+
 # Vi
 *.swp
 *~
