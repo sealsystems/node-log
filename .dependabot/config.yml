@@ -7,6 +7,7 @@ update_configs:
     version_requirement_updates: "increase_versions"
     commit_message:
       prefix: "chore"
+      prefix_development: "no-release"
       include_scope: true
     allowed_updates:
       # Trigger only security updates for dependencies by default
