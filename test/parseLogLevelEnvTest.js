@@ -1,7 +1,7 @@
 'use strict';
 
 const assert = require('assertthat');
-const nodeenv = require('nodeenv');
+const nodeenv = require('nodeenv').default;
 
 const parse = require('../lib/parseLogLevelEnv');
 
