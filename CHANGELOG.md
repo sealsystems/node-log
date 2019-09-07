@@ -1,3 +1,20 @@
+## 2.0.26 (2019-09-07)
+
+### Chores
+
+
+#### bump hosted-git-info from 2.8.2 to 2.8.4 ([5c5000a](https://github.com/sealsystems/node-log/commit/5c5000a))
+
+Bumps [hosted-git-info](https://github.com/npm/hosted-git-info) from 2.8.2 to 2.8.4.
+- [Release notes](https://github.com/npm/hosted-git-info/releases)
+- [Changelog](https://github.com/npm/hosted-git-info/blob/v2.8.4/CHANGELOG.md)
+- [Commits](https://github.com/npm/hosted-git-info/compare/v2.8.2...v2.8.4)
+
+Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+
+
+---
+
 ## 2.0.25 (2019-09-07)
 
 ### Chores
