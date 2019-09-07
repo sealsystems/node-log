@@ -1,3 +1,28 @@
+## 2.0.6 (2019-09-07)
+
+### Chores
+
+
+#### bump [@sealsystems](https://github.com/sealsystems)/semantic-release from 4.0.2 to 4.0.3 ([9fd0446](https://github.com/sealsystems/node-log/commit/9fd0446))
+
+Bumps [@sealsystems/semantic-release](https://github.com/sealsystems/node-semantic-release) from 4.0.2 to 4.0.3.
+- [Release notes](https://github.com/sealsystems/node-semantic-release/releases)
+- [Changelog](https://github.com/sealsystems/node-semantic-release/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/sealsystems/node-semantic-release/compare/4.0.2...4.0.3)
+
+Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+#### bump [@sealsystems](https://github.com/sealsystems)/semantic-release from 4.0.3 to 4.0.4 ([525676d](https://github.com/sealsystems/node-log/commit/525676d))
+
+Bumps [@sealsystems/semantic-release](https://github.com/sealsystems/node-semantic-release) from 4.0.3 to 4.0.4.
+- [Release notes](https://github.com/sealsystems/node-semantic-release/releases)
+- [Changelog](https://github.com/sealsystems/node-semantic-release/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/sealsystems/node-semantic-release/compare/4.0.3...4.0.4)
+
+Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+
+
+---
+
 ## 2.0.5 (2019-09-07)
 
 ### Chores
