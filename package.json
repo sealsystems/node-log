@@ -28,7 +28,7 @@
     "flaschenpost": "2.1.0"
   },
   "devDependencies": {
-    "@sealsystems/eslint-config-es": "3.3.7",
+    "@sealsystems/eslint-config-es": "3.3.8",
     "@sealsystems/mocha": "3.0.4",
     "@sealsystems/semantic-release": "4.0.4",
     "nodeenv": "2.0.1",
