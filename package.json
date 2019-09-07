@@ -33,7 +33,7 @@
     "@sealsystems/semantic-release": "4.0.2",
     "nodeenv": "1.0.0",
     "proxyquire": "2.1.0",
-    "sinon": "7.3.2"
+    "sinon": "7.4.2"
   },
   "release": {
     "extends": "@sealsystems/semantic-release/node-module"
