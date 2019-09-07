@@ -1,3 +1,20 @@
+## 2.0.23 (2019-09-07)
+
+### Chores
+
+
+#### bump [@sealsystems](https://github.com/sealsystems)/semantic-release ([abd1024](https://github.com/sealsystems/node-log/commit/abd1024))
+
+Bumps [@sealsystems/semantic-release](https://github.com/sealsystems/node-semantic-release) from 4.0.10 to 4.0.11.
+- [Release notes](https://github.com/sealsystems/node-semantic-release/releases)
+- [Changelog](https://github.com/sealsystems/node-semantic-release/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/sealsystems/node-semantic-release/compare/4.0.10...4.0.11)
+
+Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+
+
+---
+
 ## 2.0.22 (2019-09-07)
 
 ### Chores
