@@ -5,26 +5,15 @@ update_configs:
     directory: "/"
     update_schedule: "live"
     version_requirement_updates: "increase_versions"
+    default_reviewers:
+      - "seal-mis"
     commit_message:
       prefix: "chore"
       prefix_development: "no-release"
       include_scope: true
     allowed_updates:
-      # Trigger only security updates for dependencies by default
+      # Trigger all updates for dependencies by default
       - match:
-          dependency_type: "production"
-          update_type: "security"
-      # Trigger all updates for `seal-…` dependencies
-      - match:
-          dependency_name: "seal-*"
-          update_type: "all"
-      # Trigger all updates for `@sealsystems/…-` dependencies
-      - match:
-          dependency_name: "@sealsystems/*"
-          update_type: "all"
-      # Trigger all updates for devDependencies
-      - match:
-          dependency_type: "development"
           update_type: "all"
     automerged_updates:
       # Auto-merge minor version updates for `seal-…` dependencies
