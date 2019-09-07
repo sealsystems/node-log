@@ -1,3 +1,19 @@
+## 2.0.2 (2019-09-07)
+
+### Chores
+
+
+#### bump proxyquire from 2.1.0 to 2.1.3 ([74f07c4](https://github.com/sealsystems/node-log/commit/74f07c4))
+
+Bumps [proxyquire](https://github.com/thlorenz/proxyquire) from 2.1.0 to 2.1.3.
+- [Release notes](https://github.com/thlorenz/proxyquire/releases)
+- [Commits](https://github.com/thlorenz/proxyquire/compare/v2.1.0...v2.1.3)
+
+Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+
+
+---
+
 ## 2.0.1 (2019-09-07)
 
 ### Chores
