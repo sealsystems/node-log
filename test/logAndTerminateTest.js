@@ -9,12 +9,14 @@ const logAndTerminate = require('../lib/logAndTerminate');
 let logged;
 const logAndTerminateMock = proxyquire('../lib/logAndTerminate', {
   flaschenpost: {
-    getLogger() {
-      return {
-        fatal(message, metadata) {
-          logged.push({ message, metadata });
-        }
-      };
+    default: {
+      getLogger() {
+        return {
+          fatal(message, metadata) {
+            logged.push({ message, metadata });
+          }
+        };
+      }
     }
   }
 });

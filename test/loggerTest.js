@@ -5,7 +5,7 @@ const assert = require('assertthat');
 const logger = require('../lib/logger');
 
 suite('logger', () => {
-  test('is a object.', (done) => {
+  test('is an object.', (done) => {
     assert.that(logger).is.ofType('object');
     done();
   });

@@ -63,11 +63,11 @@ Exceptions that are not caught otherwise are also logged with log level `fatal`.
 
 ## Environment Variables
 
-_Please note that when using mocha, all log-levels are always activated. See [`flaschenpost`](https://www.npmjs.com/package/flaschenpost#setting-a-custom-host)._
+### LOG_LEVEL
 
-### LOG_LEVELS
+The minimum log level which includes all higher levels.
 
-A list of log levels to print out. Possible levels are:
+Possible values are:
 
 - `debug`
 - `info`
@@ -75,30 +75,11 @@ A list of log levels to print out. Possible levels are:
 - `error`
 - `fatal`
 
-You have to provide a comma seperated list of the log levels you are interessted in:
-
-```
-LOG_LEVELS=info,warn,error,fatal
-```
-The list given above is the default setting, if no environment variable is set.
-
-You can enable all logging levels with the shortcut
-
-```
-LOG_LEVELS=*
-```
-
-### LOG_LEVEL
-
-A single minimum log level which includes all higher levels.
+The following environment variable activates log levels `warn`, `error` and `fatal`:
 
 ```
 LOG_LEVEL=warn
 ```
-
-The setting above includes log levels `warn`, `error` and `fatal`.
-
-The environment variable `LOG_LEVEL` has precedence over `LOG_LEVELS`.
 
 ## Running the build
 
