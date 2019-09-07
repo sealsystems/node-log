@@ -1,3 +1,26 @@
+## 2.0.3 (2019-09-07)
+
+### Chores
+
+
+#### bump nodeenv from 1.0.0 to 2.0.1 ([a5f5c31](https://github.com/sealsystems/node-log/commit/a5f5c31))
+
+Bumps [nodeenv](https://github.com/thenativeweb/nodeenv) from 1.0.0 to 2.0.1.
+- [Release notes](https://github.com/thenativeweb/nodeenv/releases)
+- [Commits](https://github.com/thenativeweb/nodeenv/compare/1.0.0...2.0.1)
+
+Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+#### bump nodeenv from 1.0.0 to 2.0.1 ([14542b8](https://github.com/sealsystems/node-log/commit/14542b8))
+
+Bumps [nodeenv](https://github.com/thenativeweb/nodeenv) from 1.0.0 to 2.0.1.
+- [Release notes](https://github.com/thenativeweb/nodeenv/releases)
+- [Commits](https://github.com/thenativeweb/nodeenv/compare/1.0.0...2.0.1)
+
+Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+
+
+---
+
 ## 2.0.2 (2019-09-07)
 
 ### Chores
