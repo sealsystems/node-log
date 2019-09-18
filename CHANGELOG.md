@@ -1,3 +1,15 @@
+## 2.1.0 (2019-09-18)
+
+### Features
+
+
+#### PLS-431 ([21c73b7](https://github.com/sealsystems/node-log/commit/21c73b7))
+
+- Updated dependencies
+
+
+---
+
 ## 2.0.26 (2019-09-07)
 
 ### Chores
