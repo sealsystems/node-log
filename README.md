@@ -57,9 +57,9 @@ The following log levels are defined:
 
   **Please note:** This level will be used for logging an unhandled exception.
 
-### Uncaught exceptions
+### Uncaught exceptions/Unhandled rejections
 
-Exceptions that are not caught otherwise are also logged with log level `fatal`. After logging the exception, the process will be terminated with exit code `1`. You have to require the log module at least one time in your project to enable this feature. No further configuration is required.
+Exceptions and rejections that are not caught otherwise are also logged with log level `fatal`. After logging the error, the process will be terminated with exit code `1`. You have to require the log module at least one time in your project to enable this feature. No further configuration is required.
 
 ## Environment Variables
 
