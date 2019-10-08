@@ -1,3 +1,16 @@
+## 2.2.0 (2019-10-08)
+
+### Features
+
+
+#### PLS-431 ([d8d6975](https://github.com/sealsystems/node-log/commit/d8d6975))
+
+- Updated dependencies
+ - Used `seal-node:oss-module-update`
+
+
+---
+
 ## 2.1.0 (2019-09-18)
 
 ### Features
