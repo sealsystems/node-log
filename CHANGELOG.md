@@ -1,3 +1,14 @@
+## 2.2.1 (2020-03-09)
+
+### Chores
+
+
+#### yoed ([eb6ff0d](https://github.com/sealsystems/node-log/commit/eb6ff0d))
+
+
+
+---
+
 ## 2.2.0 (2019-10-08)
 
 ### Features
