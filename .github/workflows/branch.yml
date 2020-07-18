@@ -23,11 +23,11 @@ jobs:
 
     services:
       mongo:
-        image: mongo:3.6.17
+        image: plossys/mongodb-rs:3.6.17
         ports:
         - 27017:27017
       consul:
-        image: consul:0.9.3
+        image: consul:1.7.4
         ports:
         - 8500:8500
 
@@ -37,7 +37,9 @@ jobs:
     - name: Use Node.js 12.13.1
       uses: actions/setup-node@v1
       with:
-        NODE_VERSION: 12.13.1
+        node-version: 12.13.1
+        registry-url: https://npm.pkg.github.com/
+        scope: "@sealsystems"
 
     - name: Cache Node.js modules
       uses: actions/cache@v1
@@ -49,10 +51,16 @@ jobs:
         key: ${{ runner.os }}-${{ env.cache-name }}-12.13.1-${{ hashFiles('**/package-lock.json') }}
 
     - name: Install dependencies
-      run: npm install
+      run: npm ci
+      env:
+        # Use personal access token, must be set for *each step*
+        NODE_AUTH_TOKEN: ${{secrets.CI_TOKEN}}
 
     - name: Run tests
       run: npm run bot
+      env:
+        # Use personal access token, must be set for *each step*
+        NODE_AUTH_TOKEN: ${{secrets.CI_TOKEN}}
 
   Test-Windows:
     runs-on: windows-2019
@@ -63,16 +71,9 @@ jobs:
     - name: Use Node.js 12.13.1
       uses: actions/setup-node@v1
       with:
-        NODE_VERSION: 12.13.1
-
-    - name: Cache Node.js modules
-      uses: actions/cache@v1
-      env:
-        cache-name: cache-node-modules
-      with:
-        # npm cache files are stored in `%AppData%/npm-cache` on Windows
-        path: C:\Users\runneradmin\AppData\Roaming\npm-cache
-        key: ${{ runner.os }}-${{ env.cache-name }}-12.13.1-${{ hashFiles('**/package-lock.json') }}
+        node-version: 12.13.1
+        registry-url: https://npm.pkg.github.com/
+        scope: "@sealsystems"
 
     - name: Install MongoDB 3.6.17
       run: |
@@ -99,27 +100,52 @@ jobs:
         " | Out-File C:\mongodb\mongod.cfg -Encoding utf8
 
         Write-Host "Creating MonogDB service..."
-        cmd /c start /wait sc create MongoDB binPath= "C:\mongodb\bin\mongod.exe --service --config=C:\mongodb\mongod.cfg" DisplayName= "MongoDB" start= "demand"
+        cmd /c start /wait sc create MongoDB binPath= "C:\mongodb\bin\mongod.exe --service --config=C:\mongodb\mongod.cfg --replSet rs" DisplayName= "MongoDB" start= "demand"
 
         Write-Host "Starting MonogDB service..."
         Start-Service mongodb
 
-    - name: Install Consul 0.9.3
-      run: |
-        choco install --no-progress -y consul --version 0.9.3
-        @{
-          bind_addr="127.0.0.1"
-          bootstrap_expect=1
-          ports=@{
-            dns=53
-            http=8500
-          }
-          server=$True
-        } | ConvertTo-Json | Out-File -Filepath C:\ProgramData\consul\config\config.json -Encoding ascii
-        Restart-Service consul
+        Write-Host "Initiate MonogDB replicaSet..."
+        C:\mongodb\bin\mongo.exe --eval 'rs.initiate()'
+
+      - name: Install Consul 1.7.4
+        run: |
+          Write-Host "Creating necessary folders in C:\consul ..."
+          mkdir c:\consul\data | Out-Null
+
+          Write-Host "Downloading https://releases.hashicorp.com/consul/1.7.4/consul_1.7.4_windows_amd64.zip ..."
+          (New-Object Net.WebClient).DownloadFile(
+            "https://releases.hashicorp.com/consul/1.7.4/consul_1.7.4_windows_amd64.zip",
+            "C:\consul\consul_1.7.4_windows_amd64.zip"
+          )
+
+          Write-Host "Extracting zip archive to C:\consul ..."
+          Expand-Archive "C:\consul\consul_1.7.4_windows_amd64.zip" -DestinationPath "C:\consul"
+
+          Write-Host "Writing Consul configuration..."
+          @{
+            bind_addr="127.0.0.1"
+            data_dir="C:\consul\data"
+            bootstrap_expect=1
+            ports=@{
+              dns=53
+              http=8500
+            }
+            server=$True
+          } | ConvertTo-Json | Out-File -Filepath "C:\consul\config.json" -Encoding ascii
+
+          Write-Host "Starting Consul service..."
+          cmd /c start /wait sc create Consul binPath= "C:\consul\consul.exe agent -config-file=C:\consul\config.json" DisplayName= "Consul" start= "demand"
+          Start-Service Consul
 
     - name: Install dependencies
-      run: npm install
+      run: npm ci
+      env:
+        # Use personal access token, must be set for *each step*
+        NODE_AUTH_TOKEN: ${{secrets.CI_TOKEN}}
 
     - name: Run tests
       run: npm run bot
+      env:
+        # Use personal access token, must be set for *each step*
+        NODE_AUTH_TOKEN: ${{secrets.CI_TOKEN}}
