@@ -1,3 +1,14 @@
+## 2.2.2 (2020-08-02)
+
+### Chores
+
+
+#### Update nodeenv ([b16e2bd](https://github.com/sealsystems/node-log/commit/b16e2bd))
+
+
+
+---
+
 ## 2.2.1 (2020-03-09)
 
 ### Chores
