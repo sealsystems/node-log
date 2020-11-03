@@ -25,7 +25,7 @@
     "url": "https://github.com/sealsystems/node-log.git"
   },
   "dependencies": {
-    "flaschenpost": "2.1.0"
+    "flaschenpost": "4.3.17"
   },
   "devDependencies": {
     "@sealsystems/eslint-config-es": "3.6.2",
