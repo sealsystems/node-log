@@ -1,3 +1,10 @@
+## 2.2.3 (2020-11-04)
+
+### Bug Fixes
+
+
+set loglevel to info, if invalid ([53a4127](https://github.com/sealsystems/node-log/commit/53a4127))
+
 ## 2.2.2 (2020-08-02)
 
 ### Chores
