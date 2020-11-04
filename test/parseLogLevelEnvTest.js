@@ -30,16 +30,11 @@ suite('parseLogLevelEnv', () => {
     done();
   });
 
-  test('throws error if LOG_LEVEL is invalid.', (done) => {
+  test('sets LOG_LEVEL to info if LOG_LEVEL is invalid.', (done) => {
     const restore = nodeenv('LOG_LEVEL', 'hugo');
 
-    assert
-      .that(() => {
-        parse();
-      })
-      .is.throwing(
-        'Environment variable LOG_LEVEL is invalid. It must be set to one of the following values: debug,info,warn,error,fatal'
-      );
+    parse();
+    assert.that(process.env.LOG_LEVELS).is.equalTo('info,warn,error,fatal');
     restore();
     done();
   });
