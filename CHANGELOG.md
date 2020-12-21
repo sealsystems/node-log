@@ -1,3 +1,10 @@
+## 2.2.4 (2020-12-21)
+
+### Chores
+
+
+Trigger release ([7c4eba2](https://github.com/sealsystems/node-log/commit/7c4eba2))
+
 ## 2.2.3 (2020-11-04)
 
 ### Bug Fixes
