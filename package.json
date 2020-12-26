@@ -22,7 +22,7 @@
   "main": "lib/logger.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sealsystems/log"
+    "url": "https://github.com/sealsystems/node-log"
   },
   "dependencies": {
     "flaschenpost": "2.1.0"
