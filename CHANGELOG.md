@@ -1,3 +1,12 @@
+## 2.2.5 (2020-12-26)
+
+### Chores
+
+
+Update build configuration ([577065a](https://github.com/sealsystems/node-log/commit/577065a))
+
+Update build configuration ([b6c72ef](https://github.com/sealsystems/node-log/commit/b6c72ef))
+
 ## 2.2.4 (2020-12-21)
 
 ### Chores
