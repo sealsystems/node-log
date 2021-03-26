@@ -1,3 +1,10 @@
+## 2.3.0 (2021-03-26)
+
+### Features
+
+
+Added human readable isoTimestamp to log message. ([8404ab1](https://github.com/sealsystems/node-log/commit/8404ab1))
+
 ## 2.2.5 (2020-12-26)
 
 ### Chores
