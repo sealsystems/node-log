@@ -1,3 +1,10 @@
+## 2.3.1 (2021-03-26)
+
+### Chores
+
+
+added Middleware constructor ([e23314e](https://github.com/sealsystems/node-log/commit/e23314e))
+
 ## 2.3.0 (2021-03-26)
 
 ### Features
