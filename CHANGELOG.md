@@ -1,3 +1,10 @@
+## 2.3.2 (2021-03-26)
+
+### Chores
+
+
+Middleware on old flaschenpost was a stream ([161e9a1](https://github.com/sealsystems/node-log/commit/161e9a1))
+
 ## 2.3.1 (2021-03-26)
 
 ### Chores
