@@ -25,7 +25,7 @@
     "url": "https://github.com/sealsystems/node-log"
   },
   "dependencies": {
-    "flaschenpost": "5.0.14",
+    "flaschenpost": "5.0.30",
     "stack-trace": "0.0.10"
   },
   "devDependencies": {
