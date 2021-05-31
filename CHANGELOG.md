@@ -1,3 +1,10 @@
+## 2.3.3 (2021-05-31)
+
+### Bug Fixes
+
+
+Set LOG_LEVEL instead of LOG_LEVELS in case of an error ([d27513b](https://github.com/sealsystems/node-log/commit/d27513b))
+
 ## 2.3.2 (2021-03-26)
 
 ### Chores
