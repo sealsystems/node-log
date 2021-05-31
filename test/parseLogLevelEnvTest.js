@@ -12,20 +12,11 @@ suite('parseLogLevelEnv', () => {
     done();
   });
 
-  test('does not set LOG_LEVELS.', (done) => {
-    const restore = nodeenv({ LOG_LEVEL: undefined, LOG_LEVELS: undefined });
-
-    parse();
-    assert.that(process.env.LOG_LEVELS).is.undefined();
-    restore();
-    done();
-  });
-
-  test('sets LOG_LEVELS according to LOG_LEVEL.', (done) => {
+  test('sets LOG_LEVEL according to LOG_LEVEL.', (done) => {
     const restore = nodeenv('LOG_LEVEL', 'error');
 
     parse();
-    assert.that(process.env.LOG_LEVELS).is.equalTo('error,fatal');
+    assert.that(process.env.LOG_LEVEL).is.equalTo('error');
     restore();
     done();
   });
@@ -34,7 +25,7 @@ suite('parseLogLevelEnv', () => {
     const restore = nodeenv('LOG_LEVEL', 'hugo');
 
     parse();
-    assert.that(process.env.LOG_LEVELS).is.equalTo('info,warn,error,fatal');
+    assert.that(process.env.LOG_LEVEL).is.equalTo('info');
     restore();
     done();
   });
