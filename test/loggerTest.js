@@ -32,7 +32,7 @@ suite('logger', () => {
   });
 
   test('log message', async () => {
-    logger.getLogger().info('test', 'noch ein test string');
+    logger.getLogger().info('test');
     assert.that(console.log.calledOnce).is.true();
     const logMessage = console.log.getCall(0).args[0];
     const logEntry = JSON.parse(logMessage);
