@@ -1,8 +1,5 @@
 # @sealsystems/log
 
-[![CircleCI](https://circleci.com/gh/sealsystems/node-log.svg?style=svg)](https://circleci.com/gh/sealsystems/node-log)
-[![AppVeyor](https://ci.appveyor.com/api/projects/status/yguit3dj6r6t2x4a?svg=true)](https://ci.appveyor.com/project/Plossys/node-log)
-
 @sealsystems/log is the logger for all Node.js modules by SEAL Systems.
 
 All log messages will be written to `stdout` and can then be processed by 3rd-party tools.
