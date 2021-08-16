@@ -1,3 +1,10 @@
+## 2.4.0 (2021-08-16)
+
+### Features
+
+
+transform metadata to object, [PLS-1209](https://jira.sealsystems.de/jira/browse/PLS-1209), [ELK-4](https://jira.sealsystems.de/jira/browse/ELK-4), [SUE-40300](https://jira.sealsystems.de/jira/browse/SUE-40300) ([99afbad](https://github.com/sealsystems/node-log/commit/99afbad))
+
 ## 2.3.3 (2021-05-31)
 
 ### Bug Fixes
