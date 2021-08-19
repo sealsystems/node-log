@@ -1,3 +1,12 @@
+## 2.4.1 (2021-08-19)
+
+### Chores
+
+
+Use default formatter instead of fix creating json ([bb0ffdb](https://github.com/sealsystems/node-log/commit/bb0ffdb))
+
+Using the default formatter enables human readable log messages in command line clients.
+
 ## 2.4.0 (2021-08-16)
 
 ### Features
