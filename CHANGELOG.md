@@ -1,3 +1,10 @@
+## 2.4.2 (2021-11-15)
+
+### Chores
+
+
+Update dependencies ([441b20a](https://github.com/sealsystems/node-log/commit/441b20a))
+
 ## 2.4.1 (2021-08-19)
 
 ### Chores
