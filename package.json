@@ -25,22 +25,21 @@
     "url": "https://github.com/sealsystems/node-log"
   },
   "dependencies": {
-    "flaschenpost": "5.0.47",
+    "flaschenpost": "5.0.49",
     "stack-trace": "0.0.10"
   },
   "devDependencies": {
-    "@sealsystems/eslint-config-es": "3.6.8",
+    "@sealsystems/eslint-config-es": "3.7.0",
     "@sealsystems/mocha": "4.1.11",
-    "@sealsystems/semantic-release": "4.3.7",
-    "nodeenv": "3.0.69",
+    "@sealsystems/semantic-release": "sealsystems/node-semantic-release#no-npm",
+    "nodeenv": "3.0.71",
     "proxyquire": "2.1.3",
-    "sinon": "11.1.2"
+    "sinon": "12.0.1"
   },
   "release": {
     "extends": "@sealsystems/semantic-release/node-module"
   },
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   }
 }
