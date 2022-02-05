@@ -96,11 +96,3 @@ LOG_LEVEL=warn
 The setting above includes log levels `warn`, `error` and `fatal`.
 
 The environment variable `LOG_LEVEL` has precedence over `LOG_LEVELS`.
-
-## Running the build
-
-To build this module use [roboter](https://www.npmjs.com/package/roboter).
-
-```bash
-$ bot
-```
