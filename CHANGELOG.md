@@ -1,3 +1,10 @@
+## 2.4.3 (2023-05-12)
+
+### Bug Fixes
+
+
+try to avoid type mismatches in elasticsearch (pls-1626) ([6ef247c](https://github.com/sealsystems/node-log/commit/6ef247c))
+
 ## 2.4.2 (2021-11-15)
 
 ### Chores
