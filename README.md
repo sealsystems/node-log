@@ -7,7 +7,7 @@ All log messages will be written to `stdout` and can then be processed by 3rd-pa
 ## Installation
 
 ```bash
-$ npm install @sealsystems/log
+npm install @sealsystems/log
 ```
 
 ## Quick start
