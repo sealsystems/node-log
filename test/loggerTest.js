@@ -78,7 +78,7 @@ suite('logger', () => {
     assert.that(logEntry.metadata.err).is.ofType('object');
   });
 
-  test('log juman readable message', async () => {
+  test('log human readable message', async () => {
     const log = loggerFactory.getLogger();
     log.configuration.formatter = asHumanReadable;
 
