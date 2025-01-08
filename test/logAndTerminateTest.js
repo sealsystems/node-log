@@ -8,8 +8,8 @@ const logAndTerminate = require('../lib/logAndTerminate');
 
 let logged;
 const logAndTerminateMock = proxyquire('../lib/logAndTerminate', {
-  flaschenpost: {
-    flaschenpost: {
+  './loggerFactory': {
+    loggerFactory: {
       getLogger() {
         return {
           fatal(message, metadata) {
