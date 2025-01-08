@@ -1,3 +1,10 @@
+## 2.5.0 (2025-01-08)
+
+### Features
+
+
+Replaced deprecated module flaschenpost by own implementation ([f8e0df7](https://github.com/sealsystems/node-log/commit/f8e0df7))
+
 ## 2.4.3 (2023-05-12)
 
 ### Bug Fixes
