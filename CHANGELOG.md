@@ -1,3 +1,10 @@
+## 2.5.1 (2025-01-21)
+
+### Bug Fixes
+
+
+Delete possible prefix from stack-trace module result ([ba64357](https://github.com/sealsystems/node-log/commit/ba64357))
+
 ## 2.5.0 (2025-01-08)
 
 ### Features
